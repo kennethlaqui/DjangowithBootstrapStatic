@@ -1,0 +1,52 @@
+{% load staticfiles %}
+  <!-- jquery -->
+   
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    
+    <!-- source -->
+    <script src="{% static 'js/grayscale.js' %}"></script>
+    <script src="{% static 'js/loginjs.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/blur.js' %}"></script>
+    
+    <!-- inline js -->
+    <script>
+      new WOW().init();
+    </script>
+    
+    <script>
+    
+        $(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
+    <!-- navbar collapse -->
+     <script>
+     $(window).scroll(function() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+    });
+
+    </script>  
+  
